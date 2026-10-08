@@ -18,6 +18,7 @@ window.QH = (() => {
       #${PANEL_ID} .qh-head { display: flex; align-items: center;
         padding: 12px 14px; border-bottom: 1px solid #f3f4f6;
         font-weight: 600; font-size: 14px; }
+      #${PANEL_ID} .qh-by { color: #9ca3af; font-weight: 400; font-size: 11px; margin-left: 6px; }
       #${PANEL_ID} .qh-count { margin-left: auto; color: #9ca3af;
         font-weight: 400; font-size: 12px; margin-right: 10px; }
       #${PANEL_ID} .qh-toggle { background: none; border: none; cursor: pointer;
@@ -26,11 +27,12 @@ window.QH = (() => {
         flex-direction: column; gap: 8px; }
       #${PANEL_ID} .qh-body.hide { display: none; }
       #${PANEL_ID} .qh-row { display: flex; align-items: center;
-        justify-content: space-between; }
+        justify-content: space-between; gap: 8px; }
       #${PANEL_ID} .qh-label { color: #6b7280; font-size: 12px; font-weight: 600; }
+      #${PANEL_ID} .qh-btns { display: flex; gap: 6px; flex: none; }
       #${PANEL_ID} button.qh-btn { padding: 5px 14px; font-size: 12px;
         cursor: pointer; background: #2563eb; color: #fff;
-        border: none; border-radius: 6px; }
+        border: none; border-radius: 6px; flex: none; }
       #${PANEL_ID} button.qh-btn:hover { background: #1d4ed8; }
       #${PANEL_ID} button.qh-btn.qh-green { background: #16a34a; }
       #${PANEL_ID} button.qh-btn.qh-green:hover { background: #15803d; }
@@ -71,7 +73,7 @@ window.QH = (() => {
     wrap.id = PANEL_ID;
     wrap.innerHTML = `
       <div class="qh-head">
-        答题助手
+        QuizPilot <span class="qh-by">by mtedium v${chrome.runtime.getManifest().version}</span>
         <span class="qh-count">${countText}</span>
         <button class="qh-toggle">收起</button>
       </div>
