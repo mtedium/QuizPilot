@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "答题助手",
+  "description": "多模块答题助手：赛氪答题页复制题目给 AI 并自动填入；piclass 作业页复制题目、后台批量提交答案",
+  "version": "0.3.5",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.saikr.com/*"],
+      "js": ["common.js", "saikr.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://piclass.cn/*"],
+      "js": ["common.js", "bank.js", "piclass.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
