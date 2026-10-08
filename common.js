@@ -18,7 +18,10 @@ window.QH = (() => {
       #${PANEL_ID} .qh-head { display: flex; align-items: center;
         padding: 12px 14px; border-bottom: 1px solid #f3f4f6;
         font-weight: 600; font-size: 14px; }
-      #${PANEL_ID} .qh-by { color: #9ca3af; font-weight: 400; font-size: 11px; margin-left: 6px; }
+      #${PANEL_ID} .qh-by { color: #9ca3af; font-weight: 400; font-size: 11px;
+        margin-left: 6px; }
+      #${PANEL_ID} .qh-by a { color: inherit; text-decoration: none; }
+      #${PANEL_ID} .qh-by a:hover { text-decoration: underline; }
       #${PANEL_ID} .qh-count { margin-left: auto; color: #9ca3af;
         font-weight: 400; font-size: 12px; margin-right: 10px; }
       #${PANEL_ID} .qh-toggle { background: none; border: none; cursor: pointer;
@@ -73,7 +76,7 @@ window.QH = (() => {
     wrap.id = PANEL_ID;
     wrap.innerHTML = `
       <div class="qh-head">
-        QuizPilot <span class="qh-by">by mtedium v${chrome.runtime.getManifest().version}</span>
+        QuizPilot <span class="qh-by"><a href="https://github.com/mtedium/QuizPilot" target="_blank" rel="noopener">by mtedium v${chrome.runtime.getManifest().version}</a></span>
         <span class="qh-count">${countText}</span>
         <button class="qh-toggle">收起</button>
       </div>
